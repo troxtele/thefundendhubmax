@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Code Pro Light";
+  src: url("./assets/fonts/Code-Pro-Light-LC.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Code Pro regular";
+  src: url("./assets/fonts/Code-Pro-LC.otf") format("opentype");
+}
+@font-face {
+  font-family: "Code Pro bold";
+  src: url("./assets/fonts/Code-Pro-Bold-LC.otf") format("opentype");
+}
+@layer base {
+  html {
+    font-family: "Code Pro regular";
+  }
+}
+
+section {
+  padding-top: 5rem;
+}
+body {
+  background-color: #090913;
+}
+
+h1,
+h2 {
+  line-height: 1;
+}
+
+p,
+span {
+  font-family: "Montserrat";
+  font-size: 1.1rem;
+  line-height: -0.8;
+}
+
+.container {
+  margin: auto;
+  max-width: 72rem;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.map-img {
+  background-image: url("./assets/images/map.png");
+}
+
+.prices span {
+  font-size: 0.9rem;
+  font-family: "Code Pro regular";
+}
+
+.prices .refund span {
+  font-size: 1.1rem;
+}
+
+.faq p,
+span {
+  font-size: 0.9rem;
+}
+
+/* evaluation */
+.shadow {
+  box-shadow: 0px 2px 45px 4px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 0px 2px 45px 4px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 0px 2px 45px 4px rgba(0, 0, 0, 0.65);
+}
+
+.footer-gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    150deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(42, 27, 43, 1) 100%
+  );
+}
+/* Swipe caroulsel */
+
+.evaluation-slider .swiper-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.swiper-pagination {
+  position: fixed;
+  bottom: -2.5rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #c381fc;
+}
+
+.evaluation-slider .swiper-slide {
+  max-width: 20.125rem;
+}
+
+.swiper,
+swiper-container {
+  overflow: visible;
+}
+
+.price-slider {
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
